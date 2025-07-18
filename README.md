@@ -1,56 +1,29 @@
-This Python script processes a given text file to extract and validate email addresses. The script reads the file, identifies words that resemble email addresses, checks their validity using a regular expression, and outputs the valid ones into a results file. Invalid email addresses are also logged into a separate file for auditing purposes.
+# Email Validator
 
-Features:
-Extracts email addresses from a text file.
-Validates email format using a regular expression.
-Outputs valid emails to a results.out file.
-Logs invalid emails to an invalid_emails.log file.
-Provides user-friendly feedback on the number of valid emails processed.
-Requirements:
-Python 3.x
-Usage:
-Prepare the input file: Ensure that your text file contains the email addresses you want to process.
+This Python script reads a text file, extracts potential email addresses, validates them using a regular expression, and writes the valid and invalid results to separate output files.
 
-Run the script:
+## 📄 Overview
 
-bash
-Copy
-Edit
-python email_validator.py
-Input file: When prompted, enter the path to the file you want to process.
+The script performs the following actions:
 
-Output:
+- Extracts words that resemble email addresses from a text file
+- Validates email format using a regular expression
+- Outputs valid emails to `results.out`
+- Logs invalid emails to `invalid_emails.log`
+- Displays a summary of how many valid and invalid emails were found
 
-The valid email addresses will be written to results.out.
-Any invalid email addresses will be logged to invalid_emails.log.
-Example:
-Sample Input (sample.txt):
-sql
-Copy
-Edit
-Hello, my email is john.doe@example.com. Please contact me at jane_smith123@company.org.
-Here are some invalid emails: johndoe@com, invalidemail@domain..com, test@domain@com.
-Sample Output:
-results.out:
+## ✅ Requirements
 
-graphql
-Copy
-Edit
-john.doe@example.com
-jane_smith123@company.org
-invalid_emails.log:
+- Python 3.x
 
-graphql
-Copy
-Edit
-johndoe@com
-invalidemail@domain..com
-test@domain@com
-Console Output:
+No third-party libraries are needed. This script uses only built-in Python modules.
 
-pgsql
-Copy
-Edit
-Enter file to process: sample.txt
-Processing complete. Found 2 valid emails.
-Invalid emails logged in 'invalid_emails.log'.
+## 🚀 How to Use
+
+1. **Prepare your input file**  
+   Make sure your text file (e.g., `sample.txt`) contains the content from which you want to extract emails.
+
+2. **Run the script**
+
+   ```bash
+   python email_validator.py
